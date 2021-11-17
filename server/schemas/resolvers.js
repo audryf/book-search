@@ -32,7 +32,7 @@ const resolvers = {
                 throw new AuthenticationError('Invalid credentials');
             }
 
-            const valid = await user.validatePassword(args.password);
+            const valid = await user.isCorrectPassword(args.password);
 
             if (!valid) {
                 throw new AuthenticationError('Invalid credentials');

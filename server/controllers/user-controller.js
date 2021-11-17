@@ -71,3 +71,7 @@ module.exports = {
     return res.json(updatedUser);
   },
 };
+
+const capitalizeFirstLetter = string => {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
